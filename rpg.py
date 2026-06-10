@@ -2,41 +2,65 @@
 
 import random
 
-Hero = "Hero"
-Monster = "Monster"
 hero_hp = 200
 mons_hp = 1000
-hp_hero_current = 0
-hp_mons_current = 0
 count = 0
 
 hit_hero = [42, 56, 78, 100]
 hit_mons = [10, 22, 13,]
 
+print('who gonna first?')
+turn = input()
 
+while hero_hp > 0 and mons_hp > 0:
+    if turn == "hero":
+        dmg = random.choice(hit_hero)
+        print(f"hero deal {dmg}")
+        mons_hp -= dmg
+        print(f"mau cua monster {mons_hp}")
+        
+        if mons_hp <= 0:
+            print("monster lose")
 
+        dmg = random.choice(hit_mons)
+        print(f"monster deal {dmg}")
+        hero_hp -= dmg
+        print(f"mau cua hero {hero_hp}")
+        
+        if hero_hp <= 0:
+            print("hero lose")    
+    
+        
 
-while hero_hp > 0 or  mons_hp >0 :
-    action = random.choice([Hero, Monster])
+    else:
+        dmg = random.choice(hit_mons)
+        print(f"monster deal {dmg}")
+        hero_hp -= dmg
+        print(f"mau cua hero {hero_hp}")
+        
+        if hero_hp <= 0:
+            print("hero lose")
+        
+        dmg = random.choice(hit_hero)
+        print(f"hero deal {dmg}")
+        mons_hp -= dmg
+        print(f"mau cua monster {mons_hp}")
+        
+        if mons_hp <= 0:
+            print("monster lose")
 
-    if action == Hero:
-        print("Hero turn")
-        dmg_hero = random.choice(hit_hero)
-        hp_mons_current = mons_hp - dmg_hero
-        mons_hp = hp_mons_current
-                
-    else: 
-        print("Monster turn")
-        dmg_mons = random.choice(hit_mons)
-        hp_hero_current = hero_hp - dmg_mons
-        hero_hp = hp_hero_current
     
     
-
-
-    count += 1
-    if count >= 1:
-        print(f"turn {count}")
-
     if mons_hp <= 0 or hero_hp <= 0:
         break
+
+    count += 1
+    print (f"turn {count}")
+
+        
+
+
+
+
+
+
