@@ -1,0 +1,44 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/hoc/bin/python",
+  "python.terminal.activateEnvironment": true,
+
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+
+  "editor.inlineSuggest.enabled": false,
+
+  "[python]": {
+    "editor.inlineSuggest.enabled": false,
+
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnEnter": "on",
+
+    "editor.suggest.showKeywords": true,
+    "editor.suggest.showSnippets": false,
+    "editor.suggest.showFunctions": true,
+    "editor.suggest.showMethods": true,
+    "editor.suggest.showClasses": true,
+    "editor.suggest.showModules": true,
+    "editor.suggest.showVariables": true,
+    "editor.suggest.showWords": true,
+
+    "editor.wordBasedSuggestions": "currentDocument",
+
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.autoIndent": "full",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.indentation": true
+  }
+}
